@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diet & Nutrition Calculator | PtsfitnessStudio</title>
+    <link rel="icon" type="image/png" href="../image/logo.jpg">
+    <link rel="stylesheet" href="../css/diet.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Diet & Nutrition Calculator</h1>
+            <p>Get personalized nutrition recommendations based on your goals</p>
+        </header>
+
+        <div class="calculator-container">
+            <div class="input-section">
+                <h2>Your Information</h2>
+                
+                <div class="form-group">
+                    <label for="age">Age</label>
+                    <input type="number" id="age" placeholder="Age in years" min="15" max="80" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="gender">Gender</label>
+                    <select id="gender" required>
+                        <option value="">Select Gender</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="height">Height (cm)</label>
+                    <input type="number" id="height" placeholder="Height in cm" min="50" max="250" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="weight">Weight (kg)</label>
+                    <input type="number" id="weight" placeholder="Weight in kg" min="10" max="300" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="activity">Activity Level</label>
+                    <select id="activity" required>
+                        <option value="">Select Activity Level</option>
+                        <option value="1.2">Sedentary (little or no exercise)</option>
+                        <option value="1.375">Lightly active (light exercise 1-3 days/week)</option>
+                        <option value="1.55">Moderately active (moderate exercise 3-5 days/week)</option>
+                        <option value="1.725">Very active (hard exercise 6-7 days/week)</option>
+                        <option value="1.9">Extremely active (very hard exercise, physical job)</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="goal">Your Goal</label>
+                    <select id="goal" required>
+                        <option value="">Select Your Goal</option>
+                        <option value="weight_loss">Weight Loss</option>
+                        <option value="weight_maintain">Maintain Weight</option>
+                        <option value="weight_gain">Weight Gain</option>
+                        <option value="muscle_building">Muscle Building/Bulking</option>
+                        <option value="healthy_lifestyle">Healthy Lifestyle</option>
+                    </select>
+                </div>
+                
+                <button id="calculate-diet" class="btn">Calculate Nutrition Plan</button>
+            </div>
+            
+            <div class="result-section">
+                <div class="result-card">
+                    <h2>Your Nutrition Plan</h2>
+                    
+                    <div class="calorie-result">
+                        <div class="calorie-value" id="calories">--</div>
+                        <div class="calorie-label">calories/day</div>
+                    </div>
+                    
+                    <div class="macronutrients">
+                        <h3>Macronutrient Distribution</h3>
+                        <div class="macro-grid">
+                            <div class="macro-item">
+                                <div class="macro-icon"><i class="fas fa-bread-slice"></i></div>
+                                <div class="macro-value" id="carbs">--</div>
+                                <div class="macro-label">Carbs</div>
+                            </div>
+                            <div class="macro-item">
+                                <div class="macro-icon"><i class="fas fa-drumstick-bite"></i></div>
+                                <div class="macro-value" id="protein">--</div>
+                                <div class="macro-label">Protein</div>
+                            </div>
+                            <div class="macro-item">
+                                <div class="macro-icon"><i class="fas fa-bacon"></i></div>
+                                <div class="macro-value" id="fats">--</div>
+                                <div class="macro-label">Fats</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="detailed-nutrition">
+                        <h3>Detailed Nutrition Goals</h3>
+                        <div class="nutrition-grid">
+                            <div class="nutrition-item">
+                                <div class="nutrition-label">Sugar</div>
+                                <div class="nutrition-value" id="sugar">--</div>
+                            </div>
+                            <div class="nutrition-item">
+                                <div class="nutrition-label">Fiber</div>
+                                <div class="nutrition-value" id="fiber">--</div>
+                            </div>
+                            <div class="nutrition-item">
+                                <div class="nutrition-label">Sodium</div>
+                                <div class="nutrition-value" id="sodium">--</div>
+                            </div>
+                            <div class="nutrition-item">
+                                <div class="nutrition-label">Water</div>
+                                <div class="nutrition-value" id="water">--</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="recommendations">
+                    <h3>Diet Recommendations</h3>
+                    <ul id="diet-recommendations">
+                        <li>Enter your information to get personalized recommendations</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="flex-container">
+            <div class="left-section">
+                <a href="calculate_bmi.html" class="btn btn-secondary">Back to bmi calculator</a>
+            </div>
+            <div class="right-section">
+                <a href="../index.html" class="btn btn-secondary">Go to Home Page</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/diet.js"></script>
+</body>
+</html>

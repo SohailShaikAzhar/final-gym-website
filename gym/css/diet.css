@@ -1,0 +1,284 @@
+:root {
+    --primary: #ff4d4d;
+    --secondary: #00ffaa;
+    --dark: #121212;
+    --darker: #0a0a0a;
+    --light: #f8f9fa;
+    --gray: #2a2a2a;
+    --font-main: 'Montserrat', sans-serif;
+    --font-heading: 'Oswald', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-main);
+    color: var(--light);
+    background-color: var(--dark);
+    line-height: 1.6;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: var(--darker);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+header {
+    background: linear-gradient(to right, var(--primary), var(--secondary));
+    padding: 30px;
+    text-align: center;
+}
+
+header h1 {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.calculator-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.input-section {
+    flex: 1;
+    min-width: 300px;
+    padding: 20px;
+    background-color: var(--gray);
+    border-radius: 8px;
+    margin: 10px;
+}
+
+.result-section {
+    flex: 1;
+    min-width: 300px;
+    padding: 20px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+h2 {
+    font-family: var(--font-heading);
+    color: var(--primary);
+    margin-bottom: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 2px solid var(--primary);
+    padding-bottom: 10px;
+}
+
+h3 {
+    color: var(--secondary);
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+input, select {
+    width: 100%;
+    padding: 12px 15px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    color: white;
+    font-family: var(--font-main);
+}
+
+/* Fix dropdown colors */
+select {
+    background-color: var(--darker) !important;
+    color: var(--light) !important;
+}
+
+select option {
+    background-color: var(--darker);
+    color: var(--light);
+    padding: 10px;
+}
+
+.btn {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background-color: #e03c3c;
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background-color: var(--secondary);
+    color: var(--darker);
+}
+
+.btn-secondary:hover {
+    background-color: #00e096;
+}
+
+.result-card {
+    background-color: var(--gray);
+    border-radius: 8px;
+    padding: 25px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.calorie-result {
+    margin-bottom: 25px;
+}
+
+.calorie-value {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--secondary);
+    margin: 10px 0;
+}
+
+.calorie-label {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.macronutrients {
+    margin-bottom: 25px;
+}
+
+.macro-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.macro-item {
+    background-color: var(--darker);
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.macro-icon {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: var(--secondary);
+}
+
+.macro-value {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--light);
+    margin-bottom: 5px;
+}
+
+.macro-label {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.detailed-nutrition {
+    margin-bottom: 20px;
+}
+
+.nutrition-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.nutrition-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: var(--darker);
+    border-radius: 6px;
+}
+
+.nutrition-label {
+    font-weight: 600;
+}
+
+.nutrition-value {
+    color: var(--secondary);
+    font-weight: 600;
+}
+
+.recommendations {
+    background-color: var(--gray);
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.recommendations ul {
+    padding-left: 20px;
+}
+
+.recommendations li {
+    margin-bottom: 10px;
+}
+
+.navigation {
+    padding: 20px;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .calculator-container {
+        flex-direction: column;
+    }
+    
+    .input-section, .result-section {
+        margin: 10px 0;
+    }
+    
+    .macro-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .nutrition-grid {
+        grid-template-columns: 1fr;
+    }
+}

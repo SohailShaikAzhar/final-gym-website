@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Nutrition Database</title>
+    <link rel="icon" type="image/png" href="../image/logo.jpg">
+    <link rel="stylesheet" href="../css/food.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Everyday Foods Nutrition Database</h1>
+        </header>
+        
+        <div class="description">
+            Nutritional values per 100g serving. Use this reference for meal planning and tracking your macronutrient intake.
+        </div>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Food Name</th>
+                    <th>Calories</th>
+                    <th>Protein (g)</th>
+                    <th>Fats (g)</th>
+                    <th>Carbs (g)</th>
+                    <th>Sugars (g)</th>
+                    <th>Fiber (g)</th>
+                    <th>Water (%)</th>
+                    <th>Sodium (mg)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="category-header">
+                    <td colspan="9">Fruits</td>
+                </tr>
+                <tr>
+                    <td class="food-name">Apple</td>
+                    <td class="number">52</td>
+                    <td class="number">0.3</td>
+                    <td class="number">0.2</td>
+                    <td class="number">14</td>
+                    <td class="number">10</td>
+                    <td class="number">2.4</td>
+                    <td class="number">86</td>
+                    <td class="number">1</td>
+                </tr>
+                <tr>
+                    <td class="food-name">Banana</td>
+                    <td class="number">89</td>
+                    <td class="number">1.1</td>
+                    <td class="number">0.3</td>
+                    <td class="number">23</td>
+                    <td class="number">12</td>
+                    <td class="number">2.6</td>
+                    <td class="number">75</td>
+                    <td class="number">1</td>
+                </tr>
+                <tr>
+                    <td class="food-name">Orange</td>
+                    <td class="number">47</td>
+                    <td class="number">0.9</td>
+                    <td class="number">0.1</td>
+                    <td class="number">12</td>
+                    <td class="number">9</td>
+                    <td class="number">2.4</td>
+                    <td class="number">87</td>
+                    <td class="number">0</td>
+                </tr>
+                <tr>
+                    <td class="food-name">Strawberries</td>
+                    <td class="number">32</td>
+                    <td class="number">0.7</td>
+                    <td class="number">0.3</td>
+                    <td class="number">7.7</td>
+                    <td class="number">4.9</td>
+                    <td class="number">2.0</td>
+                    <td class="number">91</td>
+                    <td class="number">1</td>
+                </tr>
+                <tr>
+                    <td class="food-name">Grapes</td>
+                    <td class="number">69</td>
+                    <td class="number">0.7</td>
+                    <td class="number">0.2</td>
+                    <td class="number">18</td>
+                    <td class="number">16</td>
+                    <td class="number">0.9</td>
+                    <td class="number">81</td>
+                    <td class="number">2</td>
+                </tr>
+                
+                <tr class="category-header">
+                    <td colspan="9">Vegetables</td>
+                </tr>
+                <tr>
+                    <td class="food-name">Broccoli</td>
+                    <td class="number">34</td>
+                    <td class="number">2.8</td>
+                    <td class="number">0.4</td>
+                    <td class="number">7</td>
+                    <td class="number">1.7</td>
+                    <td class="number">2.6</td>
+                    <td class="number">89</td>
+                    <td class="number">33</td>
+                </tr>
+                <tr>
+                    <td class="food-name">Carrot</td>
+                    <td class="number">41</td>
+                    <td class="number">0.9</td>
+                    <td class="number">0.2</td>
+                    <td class="number">10</td>
+                    <td class="number">4.7</td>
+                    <td class="number">2.8</td>
+                    <td class="number">88</td>
+                    <td class="number">69</td>
+                </tr>
+                <tr>
+                    <td class="food-name">Spinach</td>
+                    <td class="number">23</td>
+                    <td class="number">2.9</td>
+                    <td class="number">0.4</td>
+                    <td class="number">3.6</td>
+                    <td class="number">0.4</td>
+                    <td class="number">2.2</td>
+                    <td class="number">91</td>
+                    <td class="number">79</td>
+                </tr>
+                <tr>
+                    <td class="food-name">Potato (with skin)</td>
+                    <td class="number">77</td>
+                    <td class="number">2.0</td>
+                    <td class="number">0.1</td>
+                    <td class="number">17</td>
+                    <td class="number">0.8</td>
+                    <td class="number">2.2</td>
+                    <td class="number">79</td>
+                    <td class="number">6</td>
+                </tr>
+                <tr>
+                    <td class="food-name">Tomato</td>
+                    <td class="number">18</td>
+                    <td class="number">0.9</td>
+                    <td class="number">0.2</td>
+                    <td class="number">3.9</td>
+                    <td class="number">2.6</td>
+                    <td class="number">1.2</td>
+                    <td class="number">95</td>
+                    <td class="number">5</td>
+                </tr>
+                
+                <tr class="category-header">
+                    <td colspan="9">Grains & Cereals</td>
+                </tr>
+                <tr>
+                    <td class="food-name">Brown Rice (cooked)</td>
+                    <td class="number">111</td>
+                    <td class="number">2.6</td>
+                    <td class="number">0.9</td>
+                    <td class="number">23</td>
+                    <td class="number">0.4</td>
+                    <td class="number">1.8</td>
+                    <td class="number">73</td>
+                    <td class="number">5</td>
+                </tr>
+                <tr>
+                    <td class="food-name">Oats</td>
+                    <td class="number">389</td>
+                    <td class="number">16.9</td>
+                    <td class="number">6.9</td>
+                    <td class="number">66</td>
+                    <td class="number">0</td>
+                    <td class="number">10.6</td>
+                    <td class="number">8</td>
+                    <td class="number">2</td>
+                </tr>
+                <tr>
+                    <td class="food-name">Whole Wheat Bread</td>
+                    <td class="number">265</td>
+                    <td class="number">13.4</td>
+                    <td class="number">4.4</td>
+                    <td class="number">43</td>
+                    <td class="number">6.4</td>
+                    <td class="number">7.4</td>
+                    <td class="number">36</td>
+                    <td class="number">486</td>
+                </tr>
+                <tr>
+                    <td class="food-name">Quinoa (cooked)</td>
+                    <td class="number">120</td>
+                    <td class="number">4.4</td>
+                    <td class="number">1.9</td>
+                    <td class="number">21</td>
+                    <td class="number">0.9</td>
+                    <td class="number">2.8</td>
+                    <td class="number">72</td>
+                    <td class="number">7</td>
+                </tr>
+                <tr>
+                    <td class="food-name">Pasta (cooked)</td>
+                    <td class="number">131</td>
+                    <td class="number">5.1</td>
+                    <td class="number">1.1</td>
+                    <td class="number">25</td>
+                    <td class="number">0.6</td>
+                    <td class="number">1.8</td>
+                    <td class="number">68</td>
+                    <td class="number">1</td>
+                </tr>
+                
+                <tr class="category-header">
+                    <td colspan="9">Protein Sources</td>
+                </tr>
+                <tr>
+                    <td class="food-name">Chicken Breast (cooked)</td>
+                    <td class="number">165</td>
+                    <td class="number">31</td>
+                    <td class="number">3.6</td>
+                    <td class="number">0</td>
+                    <td class="number">0</td>
+                    <td class="number">0</td>
+                    <td class="number">65</td>
+                    <td class="number">74</td>
+                </tr>
+                <tr>
+                    <td class="food-name">Salmon (cooked)</td>
+                    <td class="number">206</td>
+                    <td class="number">22</td>
+                    <td class="number">13</td>
+                    <td class="number">0</td>
+                    <td class="number">0</td>
+                    <td class="number">0</td>
+                    <td class="number">64</td>
+                    <td class="number">61</td>
+                </tr>
+                <tr>
+                    <td class="food-name">Eggs (whole)</td>
+                    <td class="number">155</td>
+                    <td class="number">13</td>
+                    <td class="number">11</td>
+                    <td class="number">1.1</td>
+                    <td class="number">1.1</td>
+                    <td class="number">0</td>
+                    <td class="number">75</td>
+                    <td class="number">124</td>
+                </tr>
+                <tr>
+                    <td class="food-name">Tofu</td>
+                    <td class="number">76</td>
+                    <td class="number">8.1</td>
+                    <td class="number">4.8</td>
+                    <td class="number">1.9</td>
+                    <td class="number">0.3</td>
+                    <td class="number">0.3</td>
+                    <td class="number">85</td>
+                    <td class="number">7</td>
+                </tr>
+                <tr>
+                    <td class="food-name">Lentils (cooked)</td>
+                    <td class="number">116</td>
+                    <td class="number">9</td>
+                    <td class="number">0.4</td>
+                    <td class="number">20</td>
+                    <td class="number">1.8</td>
+                    <td class="number">7.9</td>
+                    <td class="number">70</td>
+                    <td class="number">2</td>
+                </tr>
+                
+                <tr class="category-header">
+                    <td colspan="9">Dairy & Alternatives</td>
+                </tr>
+                <tr>
+                    <td class="food-name">Whole Milk</td>
+                    <td class="number">61</td>
+                    <td class="number">3.2</td>
+                    <td class="number">3.3</td>
+                    <td class="number">4.8</td>
+                    <td class="number">5.1</td>
+                    <td class="number">0</td>
+                    <td class="number">88</td>
+                    <td class="number">40</td>
+                </tr>
+                <tr>
+                    <td class="food-name">Greek Yogurt</td>
+                    <td class="number">59</td>
+                    <td class="number">10</td>
+                    <td class="number">0.4</td>
+                    <td class="number">3.6</td>
+                    <td class="number">3.2</td>
+                    <td class="number">0</td>
+                    <td class="number">85</td>
+                    <td class="number">36</td>
+                </tr>
+                <tr>
+                    <td class="food-name">Cheddar Cheese</td>
+                    <td class="number">404</td>
+                    <td class="number">23</td>
+                    <td class="number">33</td>
+                    <td class="number">3.1</td>
+                    <td class="number">0.5</td>
+                    <td class="number">0</td>
+                    <td class="number">37</td>
+                    <td class="number">621</td>
+                </tr>
+                <tr>
+                    <td class="food-name">Almond Milk (unsweetened)</td>
+                    <td class="number">17</td>
+                    <td class="number">0.6</td>
+                    <td class="number">1.5</td>
+                    <td class="number">0.6</td>
+                    <td class="number">0.2</td>
+                    <td class="number">0.3</td>
+                    <td class="number">97</td>
+                    <td class="number">72</td>
+                </tr>
+                <tr>
+                    <td class="food-name">Cottage Cheese</td>
+                    <td class="number">98</td>
+                    <td class="number">11</td>
+                    <td class="number">4.3</td>
+                    <td class="number">3.4</td>
+                    <td class="number">2.7</td>
+                    <td class="number">0</td>
+                    <td class="number">79</td>
+                    <td class="number">364</td>
+                </tr>
+                
+                <tr class="category-header">
+                    <td colspan="9">Nuts & Seeds</td>
+                </tr>
+                <tr>
+                    <td class="food-name">Almonds</td>
+                    <td class="number">579</td>
+                    <td class="number">21</td>
+                    <td class="number">50</td>
+                    <td class="number">22</td>
+                    <td class="number">4.4</td>
+                    <td class="number">12</td>
+                    <td class="number">5</td>
+                    <td class="number">1</td>
+                </tr>
+                <tr>
+                    <td class="food-name">Walnuts</td>
+                    <td class="number">654</td>
+                    <td class="number">15</td>
+                    <td class="number">65</td>
+                    <td class="number">14</td>
+                    <td class="number">2.6</td>
+                    <td class="number">6.7</td>
+                    <td class="number">4</td>
+                    <td class="number">2</td>
+                </tr>
+                <tr>
+                    <td class="food-name">Peanuts</td>
+                    <td class="number">567</td>
+                    <td class="number">26</td>
+                    <td class="number">49</td>
+                    <td class="number">16</td>
+                    <td class="number">4.7</td>
+                    <td class="number">8.5</td>
+                    <td class="number">7</td>
+                    <td class="number">18</td>
+                </tr>
+                <tr>
+                    <td class="food-name">Chia Seeds</td>
+                    <td class="number">486</td>
+                    <td class="number">17</td>
+                    <td class="number">31</td>
+                    <td class="number">42</td>
+                    <td class="number">0</td>
+                    <td class="number">34</td>
+                    <td class="number">6</td>
+                    <td class="number">16</td>
+                </tr>
+                <tr>
+                    <td class="food-name">Sunflower Seeds</td>
+                    <td class="number">584</td>
+                    <td class="number">21</td>
+                    <td class="number">51</td>
+                    <td class="number">20</td>
+                    <td class="number">2.6</td>
+                    <td class="number">8.6</td>
+                    <td class="number">5</td>
+                    <td class="number">9</td>
+                </tr>
+                
+                <tr class="category-header">
+                    <td colspan="9">Legumes</td>
+                </tr>
+                <tr>
+                    <td class="food-name">Chickpeas (cooked)</td>
+                    <td class="number">139</td>
+                    <td class="number">7.1</td>
+                    <td class="number">2.8</td>
+                    <td class="number">22</td>
+                    <td class="number">4.8</td>
+                    <td class="number">6.4</td>
+                    <td class="number">70</td>
+                    <td class="number">7</td>
+                </tr>
+                <tr>
+                    <td class="food-name">Black Beans (cooked)</td>
+                    <td class="number">132</td>
+                    <td class="number">8.9</td>
+                    <td class="number">0.5</td>
+                    <td class="number">24</td>
+                    <td class="number">0.3</td>
+                    <td class="number">8.7</td>
+                    <td class="number">66</td>
+                    <td class="number">1</td>
+                </tr>
+                <tr>
+                    <td class="food-name">Kidney Beans (cooked)</td>
+                    <td class="number">127</td>
+                    <td class="number">8.7</td>
+                    <td class="number">0.5</td>
+                    <td class="number">23</td>
+                    <td class="number">0.3</td>
+                    <td class="number">6.4</td>
+                    <td class="number">67</td>
+                    <td class="number">1</td>
+                </tr>
+                
+                <tr class="category-header">
+                    <td colspan="9">Oils & Fats</td>
+                </tr>
+                <tr>
+                    <td class="food-name">Olive Oil</td>
+                    <td class="number">884</td>
+                    <td class="number">0</td>
+                    <td class="number">100</td>
+                    <td class="number">0</td>
+                    <td class="number">0</td>
+                    <td class="number">0</td>
+                    <td class="number">0</td>
+                    <td class="number">2</td>
+                </tr>
+                <tr>
+                    <td class="food-name">Butter</td>
+                    <td class="number">717</td>
+                    <td class="number">0.9</td>
+                    <td class="number">81</td>
+                    <td class="number">0.1</td>
+                    <td class="number">0.1</td>
+                    <td class="number">0</td>
+                    <td class="number">18</td>
+                    <td class="number">643</td>
+                </tr>
+                <tr>
+                    <td class="food-name">Avocado</td>
+                    <td class="number">160</td>
+                    <td class="number">2.0</td>
+                    <td class="number">15</td>
+                    <td class="number">9.0</td>
+                    <td class="number">0.7</td>
+                    <td class="number">7.0</td>
+                    <td class="number">73</td>
+                    <td class="number">7</td>
+                </tr>
+                
+                <tr class="category-header">
+                    <td colspan="9">Beverages</td>
+                </tr>
+                <tr>
+                    <td class="food-name">Orange Juice</td>
+                    <td class="number">45</td>
+                    <td class="number">0.7</td>
+                    <td class="number">0.2</td>
+                    <td class="number">10</td>
+                    <td class="number">8.4</td>
+                    <td class="number">0.2</td>
+                    <td class="number">88</td>
+                    <td class="number">1</td>
+                </tr>
+                <tr>
+                    <td class="food-name">Black Coffee</td>
+                    <td class="number">1</td>
+                    <td class="number">0.1</td>
+                    <td class="number">0.0</td>
+                    <td class="number">0.0</td>
+                    <td class="number">0.0</td>
+                    <td class="number">0.0</td>
+                    <td class="number">99</td>
+                    <td class="number">2</td>
+                </tr>
+                
+                <tr class="category-header" id="back">
+                    <td colspan="9">Other Common Foods</td>
+                </tr>
+                <tr>
+                    <td class="food-name">Dark Chocolate (70-85%)</td>
+                    <td class="number">598</td>
+                    <td class="number">7.8</td>
+                    <td class="number">43</td>
+                    <td class="number">46</td>
+                    <td class="number">24</td>
+                    <td class="number">11</td>
+                    <td class="number">1</td>
+                    <td class="number">20</td>
+                </tr>
+                <tr>
+                    <td class="food-name">Honey</td>
+                    <td class="number">304</td>
+                    <td class="number">0.3</td>
+                    <td class="number">0.0</td>
+                    <td class="number">82</td>
+                    <td class="number">82</td>
+                    <td class="number">0.2</td>
+                    <td class="number">17</td>
+                    <td class="number">4</td>
+                </tr>
+                <tr>
+                    <td class="food-name">White Sugar</td>
+                    <td class="number">387</td>
+                    <td class="number">0.0</td>
+                    <td class="number">0.0</td>
+                    <td class="number">100</td>
+                    <td class="number">100</td>
+                    <td class="number">0.0</td>
+                    <td class="number">0.0</td>
+                    <td class="number">1</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <footer>
+            <p>Note: Nutritional values are approximate and can vary based on specific varieties and preparation methods.</p>
+        </footer>
+        <div class="back-to-home-btn-container">
+            <a href="../index.html" class="back-to-home-btn">Back to Home</a>
+        </div>
+</body>
+</html>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced BMI Calculator | PtsfitnessStudio</title>
+    <link rel="icon" type="image/png" href="../image/logo.jpg">
+    <link rel="stylesheet" href="../css/calculate_bmi.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Advanced BMI Calculator</h1>
+            <p>Get a comprehensive analysis of your body composition and health metrics</p>
+        </header>
+
+        <div class="calculator-container">
+            <div class="input-section">
+                <h2>Personal Information</h2>
+                
+                <div class="form-group">
+                    <label for="age">Age</label>
+                    <input type="number" id="age" placeholder="Age in years" min="15" max="80" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="gender">Gender</label>
+                    <select id="gender" required>
+                        <option value="">Select Gender</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select>
+                </div>
+                
+                <h2>Body Measurements</h2>
+                
+                <div class="units-container">
+                    <div class="unit-group">
+                        <h3>Height Unit</h3>
+                        <div class="unit-toggles">
+                            <button class="unit-toggle height-unit-toggle active" data-unit="cm">cm</button>
+                            <button class="unit-toggle height-unit-toggle" data-unit="ft">ft/in</button>
+                        </div>
+                    </div>
+                    
+                    <div class="unit-group">
+                        <h3>Weight Unit</h3>
+                        <div class="unit-toggles">
+                            <button class="unit-toggle weight-unit-toggle active" data-unit="kg">kg</button>
+                            <button class="unit-toggle weight-unit-toggle" data-unit="lbs">lbs</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="height-cm">Height</label>
+                    <div id="metric-height">
+                        <input type="number" id="height-cm" placeholder="Height in cm" min="50" max="250" required>
+                    </div>
+                    <div id="imperial-height" class="hidden">
+                        <div style="display: flex; gap: 10px;">
+                            <input type="number" id="height-ft" placeholder="Feet" min="3" max="7">
+                            <input type="number" id="height-in" placeholder="Inches" min="0" max="11">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="weight-kg">Weight</label>
+                    <div id="metric-weight">
+                        <input type="number" id="weight-kg" placeholder="Weight in kg" min="10" max="300" required>
+                    </div>
+                    <div id="imperial-weight" class="hidden">
+                        <input type="number" id="weight-lbs" placeholder="Weight in lbs" min="20" max="660">
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="waist">Waist Size (cm/inches)</label>
+                    <input type="number" id="waist" placeholder="Waist measurement">
+                </div>
+                
+                <div class="form-group">
+                    <label for="hip">Hip Size (cm/inches)</label>
+                    <input type="number" id="hip" placeholder="Hip measurement">
+                </div>
+                
+                <div class="form-group">
+                    <label for="chest">Chest Size (cm/inches)</label>
+                    <input type="number" id="chest" placeholder="Chest measurement">
+                </div>
+                
+                <h2>Workout Information</h2>
+                
+                <div class="form-group">
+                    <label for="intensity">Workout Intensity</label>
+                    <select id="intensity">
+                        <option value="sedentary">Sedentary (little or no exercise)</option>
+                        <option value="light">Light (1-3 days/week)</option>
+                        <option value="moderate">Moderate (3-5 days/week)</option>
+                        <option value="active">Active (6-7 days/week)</option>
+                        <option value="very-active">Very Active (twice daily)</option>
+                    </select>
+                </div>
+                
+                <div id="workout-container">
+                    <div class="workout-item">
+                        <select class="workout-type">
+                            <option value="">Select Workout Type</option>
+                            <option value="gym">Gym/Weight Training</option>
+                            <option value="cardio">Cardio</option>
+                            <option value="yoga">Yoga/Pilates</option>
+                            <option value="swimming">Swimming</option>
+                            <option value="cycling">Cycling</option>
+                            <option value="running">Running</option>
+                            <option value="sports">Sports</option>
+                            <option value="other">Other</option>
+                        </select>
+                        <input type="number" class="workout-duration" placeholder="Minutes" min="0">
+                        <select class="workout-frequency">
+                            <option value="1">1x/week</option>
+                            <option value="2">2x/week</option>
+                            <option value="3">3x/week</option>
+                            <option value="4">4x/week</option>
+                            <option value="5">5x/week</option>
+                            <option value="6">6x/week</option>
+                            <option value="7">7x/week</option>
+                        </select>
+                        <button class="remove-workout"><i class="fas fa-times"></i></button>
+                    </div>
+                </div>
+                
+                <button id="add-workout" class="btn add-workout">Add Another Workout</button>
+                
+                <button id="calculate" class="btn">Calculate BMI & Analysis</button>
+            </div>
+            
+            <div class="result-section">
+                <div class="result-card">
+                    <h2>Your Results</h2>
+                    <div class="bmi-value">--</div>
+                    <div class="bmi-category">--</div>
+                    
+                    <div class="additional-stats">
+                        <div class="stat-box">
+                            <div class="stat-value" id="bmr">--</div>
+                            <div class="stat-label">BMR</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="stat-value" id="whr">--</div>
+                            <div class="stat-label">WHR</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="stat-value" id="bfp">--</div>
+                            <div class="stat-label">Body Fat %</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="stat-value" id="lbm">--</div>
+                            <div class="stat-label">Lean Mass</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="recommendations">
+                    <h3>Health Recommendations</h3>
+                    <ul id="recommendations-list">
+                        <li>Enter your information to get personalized recommendations</li>
+                    </ul>
+                </div>
+                    <div class="flex-container">
+                        <div class="left-section">
+                            <a href="diet.html" class="btn btn-secondary">Calculate Nutrition Plan</a>
+                        </div>
+                        <div class="right-section">
+                            <a href="../index.html" class="btn btn-secondary">Go to Home Page</a>
+                        </div>
+                 </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/calculate_bmi.js"></script>
+</body>
+</html>
